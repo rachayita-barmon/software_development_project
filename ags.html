@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0ac4ddf27a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+        <h1>Sign In/ Sign Up</h1>
+        <div class="div1">
+        <form name="myform" action ="login.php" method="post">
+            <div>
+                <label>User name   </label>
+                <i class="fa-solid fa-user"></i>
+                <input type="text" name="uname" class= "inputText" placeholder="Name">
+                <br><br>
+            </div>
+
+            <!-- 
+            <label>Email Address</label>
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" name="mail" class= "inputText" placeholder="Email">
+            <br><br>-->
+            <label>Password  </label>
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" name="pass" class= "inputText" placeholder="Password">
+            <br><br>
+            <input type="button" name= "log" id="signup" value="Sign Up" onclick="myfunction()">
+            <!--<input type="button" name ="log" id="signin" value ="Sign In" onclick="myfunction()">-->
+            <br><br>
+        </form>
+    </div>
+  </div>
+<script>
+    function myfunction(){
+        var un = document.forms["myform"]["uname"].value;
+        var pw = document.forms["myform"]["pass"].value;
+        if(un =="admin123@gmail.com" && pw== "1234"){
+        window.location.href = "admin.html";
+              }             
+        else{
+        alert("Invalid info");
+        return;
+             }
+
+
+    }
+</script>
+
+</body>
+</html>
